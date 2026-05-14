@@ -1,3 +1,32 @@
+# 🎀 Tutorial de criação de cyberdeck usando um celular antigo ✨
+
+## O que é um cyberdeck? 💻🩷
+
+<img width="500" height="333" alt="image" src="https://github.com/user-attachments/assets/b74871d7-954e-4015-857b-d3c84ebfdc04" />
+
+
+
+
+Cyberdecks são computadores portáteis personalizados inspirados em ficção científica, cultura hacker e estética cyberpunk.  
+Normalmente são feitos reaproveitando hardware antigo, adicionando acessórios, modificações estéticas e sistemas Linux personalizados ✨
+
+A ideia é transformar um dispositivo comum em algo único, funcional e com muita personalidade ♡
+
+Neste tutorial, vamos utilizar um celular Android antigo para criar um ambiente Linux completo usando o Termux, transformando o aparelho em um mini computador portátil 💿⚡
+
+## O que você vai precisar 🧃
+
+Lembrando que aqui estou mostrando o que vou utilizar no cyberdeck que estou criando 🎀  
+Mas o mais legal de cyberdecks é que literalmente não existe regra — você pode criar utilizando até uma TV Box no lugar do celular e adaptar tudo do seu jeito ♡
+
+- Um celular ou tablet Android 📱
+- Powerbank 🔋
+- Teclado Bluetooth ou USB ⌨️
+- Mouse Bluetooth ou USB 🖱️
+- Hub USB 🌐
+- Aproximadamente 2GB livres 💾
+- Criatividade para personalizar seu cyberdeck 💻🩷✨
+
 # Projeto Android Linux - Termux
 
 ## Descrição
