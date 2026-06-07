@@ -31,16 +31,12 @@ echo ""
 echo "Escolha o Desktop:"
 echo "1) XFCE4 (recomendado)"
 echo "2) LXQt (leve)"
-echo "3) MATE (médio)"
-echo "4) KDE (pesado)"
 read -p "Opção [1-4, padrão=1]: " DE_INPUT
 DE_INPUT=${DE_INPUT:-1}
 
 case $DE_INPUT in
     1) DE_NAME="XFCE4";;
     2) DE_NAME="LXQt";;
-    3) DE_NAME="MATE";;
-    4) DE_NAME="KDE Plasma";;
 esac
 echo "Selecionado: $DE_NAME"
 
@@ -66,8 +62,6 @@ CURRENT=$((CURRENT+1)); print_step $CURRENT $TOTAL "Instalando $DE_NAME"
 case $DE_INPUT in
     1) install_pkg "xfce4 xfce4-terminal xfce4-whiskermenu-plugin plank-reloaded thunar mousepad";;
     2) install_pkg "lxqt qterminal pcmanfm-qt featherpad";;
-    3) install_pkg "mate mate-tweak plank-reloaded mate-terminal";;
-    4) install_pkg "plasma-desktop konsole dolphin";;
 esac
 
 # Passo 5
@@ -89,11 +83,7 @@ apt-get install -y -q python > /dev/null 2>&1
 pip install flask > /dev/null 2>&1
 
 # Passo 9
-CURRENT=$((CURRENT+1)); print_step $CURRENT $TOTAL "Instalando Wine"
-apt-get remove -y wine-stable > /dev/null 2>&1
-apt-get install -y -q hangover-wine hangover-wowbox64 > /dev/null 2>&1
-ln -sf /data/data/com.termux/files/usr/opt/hangover-wine/bin/wine /data/data/com.termux/files/usr/bin/wine 2>/dev/null
-
+CURRENT=$((CURRENT+1)); print_step $CURRENT $TOTAL "Passo ignorado"
 # Passo 10
 CURRENT=$((CURRENT+1)); print_step $CURRENT $TOTAL "Criando scripts"
 cat > ~/start-linux.sh << 'EOF'
@@ -112,10 +102,6 @@ if [ "$DE_INPUT" == "1" ]; then
     echo "exec startxfce4" >> ~/start-linux.sh
 elif [ "$DE_INPUT" == "2" ]; then
     echo "exec startlxqt" >> ~/start-linux.sh
-elif [ "$DE_INPUT" == "3" ]; then
-    echo "exec mate-session" >> ~/start-linux.sh
-else
-    echo "exec startplasma-x11" >> ~/start-linux.sh
 fi
 
 chmod +x ~/start-linux.sh
